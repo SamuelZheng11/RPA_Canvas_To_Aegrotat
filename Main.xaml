@@ -168,13 +168,13 @@
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="634,2135" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
+                          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="634,2197" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
                             <ui:ExcelApplicationScope.Body>
                               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,2026" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,2088" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:String" Name="sisCell" />
                                     <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="rowWeighting" />
@@ -183,6 +183,7 @@
                                     <Variable x:TypeArguments="x:String" Name="userInput" />
                                     <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="userInputDataTable" />
                                     <Variable x:TypeArguments="scg:List(x:Object)" Default="[new System.Collections.Generic.List(Of Object)]" Name="userInputWeightingList" />
+                                    <Variable x:TypeArguments="scg:ICollection(x:Object)" Default="[new System.Collections.Generic.List(Of Object)]" Name="outputRowAssessmentName" />
                                   </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -201,33 +202,33 @@
                                   </If>
                                   <ui:ExcelReadRow DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="558,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_1" Result="[rowWeighting]" SheetName="[sheetName]" StartingCell="F3" />
                                   <ui:ExcelReadRow DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="558,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_2" Result="[rowAssessmentName]" SheetName="[sheetName]" StartingCell="F1" />
-                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,887" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[rowWeighting]">
+                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,949" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[rowWeighting]">
                                     <ui:ForEach.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="x:Object" Name="weighting" />
                                         </ActivityAction.Argument>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="522,754" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="522,816" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,662" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,724" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,379" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,441" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                               <TryCatch.Variables>
                                                 <Variable x:TypeArguments="x:Int32" Name="weightingCell" />
-                                                <Variable x:TypeArguments="sd:DataTable" Name="insertedRow" />
                                               </TryCatch.Variables>
                                               <TryCatch.Try>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="s:Int32[]" Name="weightsInputArray" />
+                                                    <Variable x:TypeArguments="x:String" Name="variable1" />
                                                   </Sequence.Variables>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -242,6 +243,7 @@
                                                       <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(weighting)]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
+                                                  <AddToCollection x:TypeArguments="x:Object" Collection="[outputRowAssessmentName]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4" Item="[rowAssessmentName.ElementAt(loopIndex)]" />
                                                 </Sequence>
                                               </TryCatch.Try>
                                               <TryCatch.Catches>
@@ -364,7 +366,7 @@
                                       </ActivityAction>
                                     </ui:ForEach.Body>
                                   </ui:ForEach>
-                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,247" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[rowAssessmentName]">
+                                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,247" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[outputRowAssessmentName]">
                                     <ui:ForEach.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -382,7 +384,7 @@
                                     </ui:ForEach.Body>
                                   </ui:ForEach>
                                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[userInputWeightingList.ToArray]" DataTable="[userInputDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="558,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                                  <ui:ExcelWriteRange AddHeaders="False" DataTable="[userInputDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="558,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[sheetName]" StartingCell="A12" />
+                                  <ui:ExcelWriteRange AddHeaders="False" DataTable="[userInputDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="558,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[sheetName]" StartingCell="F2" />
                                 </Sequence>
                               </ActivityAction>
                             </ui:ExcelApplicationScope.Body>
