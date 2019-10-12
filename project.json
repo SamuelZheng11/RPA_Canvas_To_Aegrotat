@@ -1,6 +1,6 @@
 {
-  "name": "Canvas_Percentages",
-  "description": "Blank Process",
+  "name": "CanvasToAegrotatFormFiller",
+  "description": "Group 3 Project",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.6.3]",
@@ -29,7 +29,8 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
-    }
+    },
+    "fileInfos": []
   },
   "expressionLanguage": "VisualBasic"
 }
