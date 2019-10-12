@@ -73,6 +73,7 @@
           <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="x:String" Name="buttonChoice" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -85,7 +86,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID16</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
     </Flowchart.StartNode>
     <FlowDecision x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Iterate through the first row of the table which contains all the assignment names" Condition="[columnCounter &lt; inputDataTable.Columns.Count]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <sap:WorkflowViewStateService.ViewState>
@@ -169,7 +170,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">463,783</av:Point>
                   <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">463,826.5 433,826.5 433,904.5 260,904.5 260,934.5</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">463,826.6 252,826.6 252,934.5</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">542,826.5 560,826.5 560,906.5 500,906.5 500,936.5</av:PointCollection>
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
@@ -179,11 +180,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">152,934.5</av:Point>
-                      <av:Size x:Key="ShapeSize">216,51.2</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">260,985.7 260,1003.2 102,1003.2 102,763.2 132,763.2 132,667.3</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">252,987.3 252,1003.2 102,1003.2 102,763.2 132,763.2 132,667.3</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (lab)" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (lab)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -386,27 +387,27 @@
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowDecision x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="Handle and process assignments that contain are labelled with test" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;test&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                <FlowDecision x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Handle and process assignments that contain are labelled with test" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;test&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">460.5,936.5</av:Point>
                       <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
                       <av:PointCollection x:Key="FalseConnector">539.5,980 569.5,980 569.5,1056.5 450,1056.5 450,1086.5</av:PointCollection>
-                      <av:PointCollection x:Key="TrueConnector">460.5,980 430.5,980 430.5,1004.5 230,1004.5 230,1034.5</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">460.5,980.1 430.5,980.1 430.5,1004.5 222,1004.5 222,1034.5</av:PointCollection>
                       <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID9">
+                    <FlowStep x:Name="__ReferenceID10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">122,1034.5</av:Point>
-                          <av:Size x:Key="ShapeSize">216,51.2</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">230,1085.5 230,1115.5 2,1115.5 2,640 32,640</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">222,1087.3 222,1117.3 2.00000000000001,1117.3 2.00000000000001,640.9 32,640.9</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName=" attach firefox (Test)" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName=" attach firefox (Test)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
                         <ui:BrowserScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -539,27 +540,27 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="handle and process any assignments labelled with assignments" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;assignment&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                    <FlowDecision x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="handle and process any assignments labelled with assignments" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;assignment&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">410.5,1086.5</av:Point>
                           <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">410.5,1130 240,1130 240,1144.5</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">410.5,1130.1 232,1130.1 232,1144.5</av:PointCollection>
                           <av:PointCollection x:Key="FalseConnector">489.5,1130 450,1130 450,1196.5</av:PointCollection>
                           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
-                        <FlowStep x:Name="__ReferenceID10">
+                        <FlowStep x:Name="__ReferenceID11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">132,1144.5</av:Point>
-                              <av:Size x:Key="ShapeSize">216,51.2</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">240,1195.5 240,1210 2,1210 2,640 32,640</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">232,1197.3 232,1210.9 2,1210.9 2,640.9 32,640.9</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (assignment)" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
+                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (assignment)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
                             <ui:BrowserScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -692,27 +693,27 @@
                         </FlowStep>
                       </FlowDecision.True>
                       <FlowDecision.False>
-                        <FlowDecision x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Handle any other assignments that do not match any of the previous cases" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;exam&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                        <FlowDecision x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="Handle any other assignments that do not match any of the previous cases" Condition="[inputDataTable.Columns.Item(columnCounter).ColumnName.ToLower().Contains(&quot;exam&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">410.5,1196.5</av:Point>
                               <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">410.5,1240 380.5,1240 380.5,1280 348,1280</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">489.5,1240 519.5,1240 519.5,1380 358,1380</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">410.5,1240.1 380.5,1240.1 380.5,1280.9 332,1280.9</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">489.7,1240.1 519.7,1240.1 519.7,1380.9 342,1380.9</av:PointCollection>
                               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
-                            <FlowStep x:Name="__ReferenceID12">
+                            <FlowStep x:Name="__ReferenceID13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">132,1254.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">216,51.2</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">240,1305.7 240,1335.7 112,1335.7 112,697.3 132,697.3 132,667.3</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">232,1307.3 232,1337.3 112,1337.3 112,697.3 132,697.3 132,667.3</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (Exam)" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
+                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (Exam)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
                                 <ui:BrowserScope.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
@@ -760,15 +761,15 @@
                             </FlowStep>
                           </FlowDecision.True>
                           <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID13">
+                            <FlowStep x:Name="__ReferenceID14">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">142,1354.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">216,51.2</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">250,1405.5 250,1420 2,1420 2,640 32,640</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">242,1407.3 242,1420.9 2,1420.9 2,640.9 32,640.9</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (Others)" sap:VirtualizedContainerService.HintSize="216,51" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
+                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="attach firefox (Others)" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="4a32d2e9bdb8f0a7f747db335a28acac" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
                                 <ui:BrowserScope.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
@@ -911,11 +912,12 @@
         </FlowDecision>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowStep x:Name="__ReferenceID15">
+        <FlowStep x:Name="__ReferenceID16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">632,534.5</av:Point>
               <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">732,587.3 732,764.02 790,764.02 790,794.02</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="handle and input the final grades" BrowserType="Firefox" DisplayName="Attach Browser 'firefox.exe  AegrotatRe...'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="BrowserScope_10" InformativeScreenshot="cd444ffbe68eebe2d0d449a6e9393d16" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;">
@@ -949,6 +951,253 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:BrowserScope>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">690,794.02</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">790,846.82 790,876.5 790.241666666667,876.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[buttonChoice]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Is there another student to fill out? If so Press YES when their form is open.&quot;]" TopMost="True">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID18" Condition="[buttonChoice.Equals(&quot;Yes&quot;)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">750.641666666667,876.5</av:Point>
+                      <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">750.641666666667,920.1 740.095,920.1 740.095,1060 770.095,1060 770.095,1090</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID19">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">638.895,1090</av:Point>
+                          <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">770.095,1150 770.095,1180 740.095,1180 740.095,1220</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[columnCounter]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID20">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">608.895,1220</av:Point>
+                              <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">740.095,1280 740.095,1310 760,1310</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[studentMarkTotal]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">628.8,1310</av:Point>
+                                  <av:Size x:Key="ShapeSize">262.4,60</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">760,1370 760,1424.5 12,1424.5 12,134.5 222,134.5 222,164.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[totalMarks]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <FlowStep.Next>
+                                <FlowStep x:Name="__ReferenceID15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">122,164.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">222,217.3 222,247.3 502,247.3 502,327</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <TryCatch sap2010:Annotation.AnnotationText="Open the aegrotat form in its firefox browser (MUST BE FIREFOX) . If the page is not open/firefox is not open catch and display an error message to the user. If succesfully open, fetch the student ID" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch.Try>
+                                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'firefox.exe  AegrotatRe...'" sap:VirtualizedContainerService.HintSize="430,344" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="738b41b1f80299f9654cc2ad38b9a2bb" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;" TimeoutMS="3000">
+                                        <ui:BrowserScope.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                                <ui:GetValue.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="653d331492ff359ecdd4804ca0142aae" Selector="&lt;webctrl name='pbInput0' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                  </ui:Target>
+                                                </ui:GetValue.Target>
+                                                <ui:GetValue.Value>
+                                                  <OutArgument x:TypeArguments="x:String">[currentStudentId]</OutArgument>
+                                                </ui:GetValue.Value>
+                                              </ui:GetValue>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:BrowserScope.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:BrowserScope>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="Ensure that the chosen persons aegrotat form page is open in FIREFOX" />
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID8">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">402,327</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">502,349.4 502,379.4 471,379.4 471,399</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Lookup the student by student id in the data table to get the row that represents their grades" DataTable="[inputDataTable]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="SIS User ID" LookupValue="[currentStudentId]" RowIndex="[currentStudentRowIndex]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:LookupDataTable>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID7">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">371,399</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">471,451.8 471,481.8 482.8,481.8 482.8,509</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                                            <TryCatch.Try>
+                                              <Assign sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="sd:DataRow">[currentStudentData]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="sd:DataRow">[inputDataTable.Rows(currentStudentRowIndex)]</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                            </TryCatch.Try>
+                                            <TryCatch.Catches>
+                                              <Catch x:TypeArguments="s:IndexOutOfRangeException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ActivityAction x:TypeArguments="s:IndexOutOfRangeException">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="s:IndexOutOfRangeException" Name="exception" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,215.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Student not able to be found in the exported data. Please ensure the correct file was selected for the course open.&quot;]" TopMost="True" />
+                                                    <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_7" Reason="Student not able to be found in the exported data. Please ensure the correct file was selected for the course open." />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </Catch>
+                                            </TryCatch.Catches>
+                                          </TryCatch>
+                                          <FlowStep.Next>
+                                            <x:Reference>__ReferenceID0</x:Reference>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
@@ -957,86 +1206,14 @@
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <FlowStep x:Name="__ReferenceID7">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">371,399</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">471,451.8 471,481.8 482.8,481.8 482.8,509</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap:VirtualizedContainerService.HintSize="436.8,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_8">
-        <TryCatch.Try>
-          <Assign sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-            <Assign.To>
-              <OutArgument x:TypeArguments="sd:DataRow">[currentStudentData]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataRow">[inputDataTable.Rows(currentStudentRowIndex)]</InArgument>
-            </Assign.Value>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Assign>
-        </TryCatch.Try>
-        <TryCatch.Catches>
-          <Catch x:TypeArguments="s:IndexOutOfRangeException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_11">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ActivityAction x:TypeArguments="s:IndexOutOfRangeException">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="s:IndexOutOfRangeException" Name="exception" />
-              </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="375.2,215.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Student not able to be found in the exported data. Please ensure the correct file was selected for the course open.&quot;]" TopMost="True" />
-                <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_7" Reason="Student not able to be found in the exported data. Please ensure the correct file was selected for the course open." />
-              </Sequence>
-            </ActivityAction>
-          </Catch>
-        </TryCatch.Catches>
-      </TryCatch>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID14">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">402,327</av:Point>
-          <av:Size x:Key="ShapeSize">200,22.4</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">502,349.4 502,379.4 471,379.4 471,399</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Lookup the student by student id in the data table to get the row that represents their grades" DataTable="[inputDataTable]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="SIS User ID" LookupValue="[currentStudentId]" RowIndex="[currentStudentRowIndex]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LookupDataTable>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID7</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
+    <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID12</x:Reference>
     <x:Reference>__ReferenceID13</x:Reference>
+    <x:Reference>__ReferenceID14</x:Reference>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1070,78 +1247,13 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:Click>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID16">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">122,164.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">222,217.3 222,247.3 502,247.3 502,327</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Open the aegrotat form in its firefox browser (MUST BE FIREFOX) . If the page is not open/firefox is not open catch and display an error message to the user. If succesfully open, fetch the student ID" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <TryCatch.Try>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'firefox.exe  AegrotatRe...'" sap:VirtualizedContainerService.HintSize="430,344" sap2010:WorkflowViewState.IdRef="BrowserScope_9" InformativeScreenshot="738b41b1f80299f9654cc2ad38b9a2bb" Selector="&lt;html app='firefox.exe' htmlwindowname='blank' title='AegrotatRecommendationV2' /&gt;" TimeoutMS="3000">
-            <ui:BrowserScope.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'INPUT'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
-                    <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="653d331492ff359ecdd4804ca0142aae" Selector="&lt;webctrl name='pbInput0' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                      </ui:Target>
-                    </ui:GetValue.Target>
-                    <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="x:String">[currentStudentId]</OutArgument>
-                    </ui:GetValue.Value>
-                  </ui:GetValue>
-                </Sequence>
-              </ActivityAction>
-            </ui:BrowserScope.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:BrowserScope>
-        </TryCatch.Try>
-        <TryCatch.Catches>
-          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
-              </ActivityAction.Argument>
-              <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" Reason="Ensure that the chosen persons aegrotat form page is open in FIREFOX" />
-            </ActivityAction>
-          </Catch>
-        </TryCatch.Catches>
-      </TryCatch>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID14</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
+    <x:Reference>__ReferenceID18</x:Reference>
+    <x:Reference>__ReferenceID19</x:Reference>
+    <x:Reference>__ReferenceID20</x:Reference>
+    <x:Reference>__ReferenceID21</x:Reference>
   </Flowchart>
 </Activity>
