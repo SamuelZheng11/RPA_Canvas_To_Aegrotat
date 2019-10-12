@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>696,2012</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>688.8,1853.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Modify_Grades_Excel_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddWeightingsOnExportedAssessments" sap:VirtualizedContainerService.HintSize="676,1952" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddWeightingsOnExportedAssessments" sap:VirtualizedContainerService.HintSize="668.8,1793.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="assessmentTotalScoreRow" />
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="assessmentNameRow" />
@@ -70,13 +70,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Open the file representing the exported Canvas Student grades" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="634,1860" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Open the file representing the exported Canvas Student grades" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="627.2,1700.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="600,1751" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="593.6,1591.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Default="0" Name="loopIndex" />
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="userInputDataTable" />
@@ -88,39 +88,39 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRow sap2010:Annotation.AnnotationText="Read the row that holds the total scores for each assessment in the exported canvas students grade file" DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="558,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_1" Result="[assessmentTotalScoreRow]" SheetName="[sheetName]" StartingCell="F3">
+            <ui:ExcelReadRow sap2010:Annotation.AnnotationText="Read the row that holds the total scores for each assessment in the exported canvas students grade file" DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="552,60" sap2010:WorkflowViewState.IdRef="ExcelReadRow_1" Result="[assessmentTotalScoreRow]" SheetName="[sheetName]" StartingCell="F3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelReadRow>
-            <ui:ExcelReadRow sap2010:Annotation.AnnotationText="get the names of each assessment in the exported canvas students grade file" DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="558,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_2" Result="[assessmentNameRow]" SheetName="[sheetName]" StartingCell="F1">
+            <ui:ExcelReadRow sap2010:Annotation.AnnotationText="get the names of each assessment in the exported canvas students grade file" DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="552,60" sap2010:WorkflowViewState.IdRef="ExcelReadRow_2" Result="[assessmentNameRow]" SheetName="[sheetName]" StartingCell="F1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelReadRow>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop though all the assessment scores" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,985" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[assessmentTotalScoreRow]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Loop though all the assessment scores" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="552,818.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[assessmentTotalScoreRow]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="weighting" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="522,852" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap:VirtualizedContainerService.HintSize="516.8,684" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,760" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="475.2,591.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch sap2010:Annotation.AnnotationText="If the score cannot be converted into an integer then we have reached the end of the assessments and should terminate (try catch on cast exception)" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,441" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch sap2010:Annotation.AnnotationText="If the score cannot be converted into an integer then we have reached the end of the assessments and should terminate (try catch on cast exception)" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,270.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <TryCatch.Variables>
                           <Variable x:TypeArguments="x:Int32" Name="weightingCell" />
                         </TryCatch.Variables>
@@ -130,7 +130,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <Sequence sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence sap:VirtualizedContainerService.HintSize="304,215.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="s:Int32[]" Name="weightsInputArray" />
                               <Variable x:TypeArguments="x:String" Name="variable1" />
@@ -140,7 +140,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap2010:Annotation.AnnotationText="attempt integer cast to determine all total assessment scores have been seen" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign sap2010:Annotation.AnnotationText="attempt integer cast to determine all total assessment scores have been seen" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[weightingCell]</OutArgument>
                               </Assign.To>
@@ -153,7 +153,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <AddToCollection x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="if the cast was successful that means this prospective assessment was an actual assessment so add it to a List ready to be written into an excel" Collection="[outputRowAssessmentName]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[assessmentNameRow.ElementAt(loopIndex)]">
+                            <AddToCollection x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="if the cast was successful that means this prospective assessment was an actual assessment so add it to a List ready to be written into an excel" Collection="[outputRowAssessmentName]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="262.4,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[assessmentNameRow.ElementAt(loopIndex)]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -163,36 +163,29 @@
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
-                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="400,105.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction x:TypeArguments="s:FormatException">
                               <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
                               </ActivityAction.Argument>
-                              <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <ui:Break sap2010:Annotation.AnnotationText="Break the total assessment score loop if there is a format exception as we have reached the end of the assessments section of the file" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Break_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:Break sap2010:Annotation.AnnotationText="Break loop execution if the end of the assessment total scores is reached" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:Break>
-                              </Sequence>
+                              </ui:Break>
                             </ActivityAction>
                           </Catch>
                         </TryCatch.Catches>
                       </TryCatch>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ask the user for the weighting of the specified assessment" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="438,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AskUserForWeighting.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ask the user for the weighting of the specified assessment" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AskUserForWeighting.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InOutArgument x:TypeArguments="scg:List(x:Object)" x:Key="userInputWeightingList">[userInputWeightingsList]</InOutArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="rowAssessmentName">[assessmentNameRow.ElementAt(loopIndex).ToString]</InArgument>
@@ -203,7 +196,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
-                      <Assign sap2010:Annotation.AnnotationText="Iteration counter, used to retrieve the assessment name" sap:VirtualizedContainerService.HintSize="438,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap2010:Annotation.AnnotationText="Iteration counter, used to retrieve the assessment name" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[loopIndex]</OutArgument>
                         </Assign.To>
@@ -226,19 +219,19 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add number of columns co-responding with the number of weightings provided" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="558,247" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[outputRowAssessmentName]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Add number of columns co-responding with the number of weightings provided" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="552,249.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[outputRowAssessmentName]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="columnName" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:AddDataColumn x:TypeArguments="x:Int32" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="[columnName.ToString]" DataTable="[userInputDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" MaxLength="100" Unique="False" />
+                    <ui:AddDataColumn x:TypeArguments="x:Int32" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="[columnName.ToString]" DataTable="[userInputDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" MaxLength="100" Unique="False" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
@@ -248,14 +241,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Add user provided weightings to a datatable. to be written into excel later" ArrayRow="[userInputWeightingsList.ToArray]" DataTable="[userInputDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="558,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Add user provided weightings to a datatable. to be written into excel later" ArrayRow="[userInputWeightingsList.ToArray]" DataTable="[userInputDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="552,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:AddDataRow>
-            <ui:ExcelWriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="Write weightings of assessments into the excel file for Canvas exported student grades" DataTable="[userInputDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="558,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[sheetName]" StartingCell="F2">
+            <ui:ExcelWriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="Write weightings of assessments into the excel file for Canvas exported student grades" DataTable="[userInputDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="552,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[sheetName]" StartingCell="F2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
