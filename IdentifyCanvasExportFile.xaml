@@ -62,7 +62,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="IdentifyCanvasGradeFIle" sap:VirtualizedContainerService.HintSize="683.2,940.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="IdentifyCanvasExportFile" sap:VirtualizedContainerService.HintSize="683.2,940.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="sisCell" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="correctFile" />
