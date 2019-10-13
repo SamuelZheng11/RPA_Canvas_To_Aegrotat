@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>692,2224.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>692,2029.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Modify_Grades_Excel_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddWeightingsOnExportedAssessments" sap:VirtualizedContainerService.HintSize="672,2164.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddWeightingsOnExportedAssessments" sap:VirtualizedContainerService.HintSize="672,1969.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="assessmentTotalScoreRow" />
       <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="assessmentNameRow" />
@@ -70,13 +70,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Open the file representing the exported Canvas Student grades" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="630.4,2072" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Open the file representing the exported Canvas Student grades" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="630.4,1876.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596.8,1962.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596.8,1767.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Default="0" Name="loopIndex" />
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="userInputDataTable" />
@@ -189,7 +189,7 @@
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ask the user for the weighting of the specified assessment" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AskUserForWeighting.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InOutArgument x:TypeArguments="scg:List(x:Object)" x:Key="userInputWeightingList">[userInputWeightingsList]</InOutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="rowAssessmentName">[assessmentNameRow.ElementAt(loopIndex).ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="assessmentName">[assessmentNameRow.ElementAt(loopIndex).ToString]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -249,8 +249,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:AddDataRow>
-            <ui:OutputDataTable DataTable="[assessmentNamesAndWeightingsDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="555.2,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[loggingAssessmentNameAndWeightings]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="555.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The data written to excel for weightings is: &quot; + loggingAssessmentNameAndWeightings]" />
             <ui:ExcelWriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="Write weightings of assessments into the excel file for Canvas exported student grades" DataTable="[userInputDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="555.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="[sheetName]" StartingCell="F2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
