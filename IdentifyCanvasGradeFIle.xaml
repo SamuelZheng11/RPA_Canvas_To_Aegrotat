@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>663.2,900</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>663.2,940</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Exported_File_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -130,10 +130,10 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,227.3</av:Point>
                       <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,280.1 300,350</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">300,280.1 300,310</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch sap2010:Annotation.AnnotationText="If the user cancels or exits the file selection process, terminate the program" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,658.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch sap2010:Annotation.AnnotationText="If the user cancels or exits the file selection process, terminate the program" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -185,9 +185,9 @@
                     <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">168.8,350</av:Point>
+                          <av:Point x:Key="ShapeLocation">168.8,310</av:Point>
                           <av:Size x:Key="ShapeSize">262.4,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,410 300,440 420,440 420,466.4</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">300,370 300,400 400,400 400,446.4</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign sap2010:Annotation.AnnotationText="Assign function used to extrct the name of sheet in the excel file. The is file name of the excel file, which is in the file path" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -209,10 +209,10 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">380.4,466.4</av:Point>
+                              <av:Point x:Key="ShapeLocation">360.4,446.4</av:Point>
                               <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">380.4,510 350.4,510 350.4,490 291.2,490</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">459.6,510 489.6,510 489.6,563.6 190,563.6 190,593.6</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">360.4,490 271.2,490</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">439.6,490 469.6,490 469.6,563.6 140,563.6 140,593.6</av:PointCollection>
                               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -220,9 +220,9 @@
                             <FlowStep x:Name="__ReferenceID4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">28.8,460</av:Point>
+                                  <av:Point x:Key="ShapeLocation">8.80000000000001,460</av:Point>
                                   <av:Size x:Key="ShapeSize">262.4,60</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">160,520 160,550 190,550 190,593.6</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">140,520 140,593.6</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <Assign sap2010:Annotation.AnnotationText="Extract the first 31 character of the filename if it is over 31 characters long. This is becasue the sheetname is a maxium of 31 characters" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -243,9 +243,9 @@
                                 <FlowStep x:Name="__ReferenceID1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">90,593.6</av:Point>
+                                      <av:Point x:Key="ShapeLocation">40,593.6</av:Point>
                                       <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">190,646.4 190,676.4 360,676.4 360,716.4</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">140,646.4 140,676.4 360,676.4 360,716.4</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="excel sheet validation to determine if the correct file was inputed" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[filePath]">
